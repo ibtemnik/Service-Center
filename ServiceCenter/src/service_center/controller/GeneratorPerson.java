@@ -12,9 +12,7 @@ public class GeneratorPerson {
 			"Nicholas", "Sarah", "Ryan", "Alexis", "Anthony", "Elizabeth", "Christopher", "Joseph", "Samantha",
 			"Samantha", "Ashley", "Daniel", "Isabella", "Andrew", "Abigail", "Hannah", "Ethan", "Olivia", "Matthew",
 			"Madison", "Joshua", "Emma", "Michael", "Emily" };
-	private Map<String, String[]> countries = new HashMap<String, String[]>();
-	private String[] streets = { "Lenina", "Rothschild", "Yerushalayim", "Ben Gurion", "Allenby", "Dizengoff",
-			"HaArbaa", "HaMasger", "HaYarkon", "Ibn Gabirol" };
+
 	private Random gen = new Random();
 
 	public GeneratorPerson(int count, IPersonsRepository prs) {
