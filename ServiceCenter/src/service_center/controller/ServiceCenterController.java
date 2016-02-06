@@ -23,11 +23,9 @@ public class ServiceCenterController {
 		
 		return "addForm";
 	}
-	
-	/*@RequestMapping("add")
+	@RequestMapping("add")
 	public String addReceipt(){
-		return null;*/
-		
+		return null;		
 	}
 
 }
