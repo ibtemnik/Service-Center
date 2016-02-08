@@ -9,7 +9,7 @@ import service_center.interfaces.IServiceCenter;
 public class ReceiptHibernate implements IServiceCenter {
 	@PersistenceContext(unitName = "springHibernate")
 	EntityManager em;
-
+///eshsdfh
 	@Override
 	@Transactional
 	public boolean addReceipt(Receipt receipt) {
