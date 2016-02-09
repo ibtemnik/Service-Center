@@ -47,8 +47,22 @@ public class ReceiptHibernate implements IServiceCenter {
 	@Override
 	@Transactional
 	public boolean addPosition(Position position) {
-		em.persist(position);
-		return true;
+		Position positionEntity = getPosition(position.getPositionJob());
+		if (positionEntity == null) {
+			positionEntity = new Position(position.getAccessLevel(), position.getPositionJob());
+			em.persist(positionEntity);
+			return true;
+		}
+		return false;
+	}
+
+	private Position getPosition(String positionJob) {
+		Query query = em.createQuery("SELECT p FROM Position p WHERE p.positionJob = ?1");
+		query.setParameter(1, positionJob);
+		List<Position> res = query.getResultList();
+		if (res == null || res.size() == 0)
+			return null;
+		return res.get(0);
 	}
 
 
