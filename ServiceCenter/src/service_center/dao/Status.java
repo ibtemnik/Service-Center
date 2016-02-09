@@ -29,4 +29,9 @@ public class Status {
 		return id;
 	}
 
+	@Override
+	public String toString() {
+		return "Status [id=" + id + ", status=" + status + "]";
 	}
+
+}

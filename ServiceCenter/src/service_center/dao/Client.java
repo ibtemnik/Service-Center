@@ -10,7 +10,7 @@ public class Client {
 	private int id;
 	private String fName;
 	private String sName;
-	private int telNumber;
+	private String telNumber;
 	private String email;
 	private String address;
 	@OneToMany (mappedBy = "client")
@@ -19,7 +19,7 @@ public class Client {
 	public Client() {
 	}
 
-	public Client(String fName, String sName, int telNumber, String email, String address) {
+	public Client(String fName, String sName, String telNumber, String email, String address) {
 		
 		this.fName = fName;
 		this.sName = sName;
@@ -44,11 +44,11 @@ public class Client {
 		this.sName = sName;
 	}
 
-	public int getTelNumber() {
+	public String getTelNumber() {
 		return telNumber;
 	}
 
-	public void setTelNumber(int telNumber) {
+	public void setTelNumber(String telNumber) {
 		this.telNumber = telNumber;
 	}
 

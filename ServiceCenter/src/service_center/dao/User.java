@@ -6,7 +6,7 @@ import javax.persistence.Id;
 import javax.persistence.ManyToOne;
 
 @Entity
-public class User{
+public class User {
 	@Id
 	@GeneratedValue
 	int id;
@@ -70,11 +70,20 @@ public class User{
 		super();
 	}
 
-	public User(String login, String password, String fName, String sName, String telNumber){ //Position position) {
+	public User(String login, String password, String fName, String sName, String telNumber) { // Position
+																								// position)
+																								// {
 		this.login = login;
 		this.password = password;
 		this.fName = fName;
 		this.sName = sName;
 		this.telNumber = telNumber;
 	}
+
+	@Override
+	public String toString() {
+		return "User [id=" + id + ", login=" + login + ", password=" + password + ", fName=" + fName + ", sName="
+				+ sName + ", telNumber=" + telNumber + ", position=" + position + "]";
+	}
+
 }

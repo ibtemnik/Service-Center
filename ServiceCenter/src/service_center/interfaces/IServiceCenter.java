@@ -12,8 +12,12 @@ public interface IServiceCenter {
 	boolean addComplexityRepair(ComplexityRepair complexityRepair);
 	boolean addStatus(Status status);
 	boolean addRepiatRepair(RepiatRepair repiatRepair);
-	boolean addHistory(History history);	
-	boolean upDateReceipt(Receipt receipt);	
+	boolean addHistory(History history);
+	
+	boolean updateReceipt(Receipt receipt);
+	public boolean updateProduct(Product product);
+	
 	public Iterable<Receipt> getAllReceipt();
-	boolean updateProduct(Product product);
+	
+
 }

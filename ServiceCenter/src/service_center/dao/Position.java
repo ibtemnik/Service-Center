@@ -31,4 +31,11 @@ public class Position {
 	public void setPositionJob(String positionJob) {
 		this.positionJob = positionJob;
 	}
+
+	@Override
+	public String toString() {
+		return "Position [accessLevel=" + accessLevel + ", positionJob=" + positionJob + "]";
+	}
+	
+	
 }

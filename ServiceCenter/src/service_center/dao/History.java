@@ -53,6 +53,13 @@ public class History {
 
 	public void setReceipt(Receipt receipt) {
 		this.receipt = receipt;
+	}
+
+	@Override
+	public String toString() {
+		return "History [id=" + id + ", receipt=" + receipt + ", status=" + status + ", date=" + date + ", user=" + user
+				+ "]";
 	}	
 
+	
 }

@@ -26,7 +26,7 @@ public class Receipt {
 	private String authorizedService;
 	private Date dateTransfer;
 	private String infoTransfer;
-	@OneToMany (mappedBy = "receipt")
+	@OneToMany //(mappedBy = "receipt")
 	private Set <RepiatRepair> repiatRepair;
 
 	public Receipt() {
@@ -143,6 +143,15 @@ public class Receipt {
 
 	public void setRepiatRepair(Set<RepiatRepair> repiatRepair) {
 		this.repiatRepair = repiatRepair;
+	}
+
+	@Override
+	public String toString() {
+		return "Receipt [id=" + id + ", date=" + date + ", client=" + client + ", shop=" + shop + ", user=" + user
+				+ ", product=" + product + ", defectClient=" + defectClient + ", equipment=" + equipment + ", view="
+				+ view + ", status=" + status + ", defectCorrect=" + defectCorrect + ", authorizedService="
+				+ authorizedService + ", dateTransfer=" + dateTransfer + ", infoTransfer=" + infoTransfer
+				+ ", repiatRepair=" + repiatRepair + "]";
 	}
 
 

@@ -1,13 +1,14 @@
 package service_center.dao;
+
 import javax.persistence.*;
 
 @Entity
-public class ComplexityRepair {
+public class ComplexityRepair{
 	@Id
 	@GeneratedValue
 	private int id;
 	private String complexity;
-	private int timeMin;
+	private Integer timeMin;
 	
 	public ComplexityRepair() {
 		super();
@@ -34,5 +35,11 @@ public class ComplexityRepair {
 	public void setTime(int time) {
 		this.timeMin = time;
 	}
+
+	@Override
+	public String toString() {
+		return "ComplexityRepair [id=" + id + ", complexity=" + complexity + ", timeMin=" + timeMin + "]";
+	}
 		
+	
 }

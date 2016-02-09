@@ -17,15 +17,15 @@ public class RepiatRepair {
 	private Product product;
 	private String defectCorrect;
 	private String authorizedService;
-	@ManyToOne
-	private Status status;
+	//@ManyToOne
+	private String status;
 	private Date dateTransfer;
 	private String infoTransfer;
-	
+
 	public RepiatRepair() {
 		super();
 	}
-	
+
 	public Date getDate() {
 		return date;
 	}
@@ -34,7 +34,7 @@ public class RepiatRepair {
 		this.date = date;
 	}
 
-		public String getDefectCorrect() {
+	public String getDefectCorrect() {
 		return defectCorrect;
 	}
 
@@ -90,18 +90,23 @@ public class RepiatRepair {
 		this.product = product;
 	}
 
-	public Status getStatus() {
+	public String getStatus() {
 		return status;
 	}
 
-	public void setStatus(Status status) {
+	public void setStatus(String status) {
 		this.status = status;
 	}
 
 	public int getId() {
 		return id;
 	}
-	
-	
-	
+
+	@Override
+	public String toString() {
+		return "RepiatRepair [id=" + id + ", date=" + date + ", receipt=" + receipt + ", user=" + user + ", product="
+				+ product + ", defectCorrect=" + defectCorrect + ", authorizedService=" + authorizedService
+				+ ", status=" + status + ", dateTransfer=" + dateTransfer + ", infoTransfer=" + infoTransfer + "]";
+	}
+
 }

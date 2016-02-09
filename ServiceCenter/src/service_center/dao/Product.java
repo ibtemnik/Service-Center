@@ -23,6 +23,19 @@ public class Product {
 		this.manufacturer = manufacturer;
 		this.model = model;
 	}
+	
+	
+	public Product(String name, String serialNumber, int warranty, String manufacturer, String model,
+			ComplexityRepair complexityRepair) {
+		this.name = name;
+		this.serialNumber = serialNumber;
+		this.warranty = warranty;
+		this.manufacturer = manufacturer;
+		this.model = model;
+		this.complexityRepair = complexityRepair;
+	}
+
+
 
 	public Product() {
 	}
@@ -78,4 +91,13 @@ public class Product {
 	public void setComplexityRepair(ComplexityRepair complexityRepair) {
 		this.complexityRepair = complexityRepair;
 	}
+
+
+	@Override
+	public String toString() {
+		return "Product [id=" + id + ", name=" + name + ", serialNumber=" + serialNumber + ", warranty=" + warranty
+				+ ", manufacturer=" + manufacturer + ", model=" + model + ", complexityRepair=" + complexityRepair
+				+ "]";
+	}
+	
 }

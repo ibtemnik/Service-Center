@@ -1,11 +1,12 @@
 package service_center.controller;
+/*package service_center.controller;
 
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Random;
-/*import tel_ran.persons.dao.Address;
+import tel_ran.persons.dao.Address;
 import tel_ran.persons.dao.Person;
-import tel_ran.persons.interfaces.IPersonsRepository;*/
+import tel_ran.persons.interfaces.IPersonsRepository;
 
 public class GeneratorPerson {
 	private String[] names = { "Jacob", "Tyler", "Lauren", "Sophia", "Alexander", "Alyssa", "David", "Grace",
@@ -59,3 +60,4 @@ public class GeneratorPerson {
 		return max > 0 ? 1 + gen.nextInt(max) : 1 + gen.nextInt(255);
 	}
 }
+*/
